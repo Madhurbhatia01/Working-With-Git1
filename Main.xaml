@@ -138,7 +138,7 @@
         <Variable x:TypeArguments="x:String" Name="Email" />
         <Variable x:TypeArguments="x:String" Name="Address" />
         <Variable x:TypeArguments="x:String" Name="Company_Name" />
-        <Variable x:TypeArguments="x:String" Name="Role_in_Company" />
+        <Variable x:TypeArguments="x:String" Name="Role_in_Company1" />
         <Variable x:TypeArguments="x:String" Name="Phone_Number" />
         <Variable x:TypeArguments="x:String" Name="jsonData" />
       </Flowchart.Variables>
@@ -162,14 +162,14 @@
             <av:PointCollection x:Key="ConnectorLocation">280.2,315.4 280.2,365</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <If Condition="[input_Transaction IsNot Nothing]" sap:VirtualizedContainerService.HintSize="520,2971.2" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[input_Transaction IsNot Nothing]" sap:VirtualizedContainerService.HintSize="520,2809.6" sap2010:WorkflowViewState.IdRef="If_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="518.4,2770.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="518.4,2608.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -226,7 +226,7 @@
               </Assign>
               <Assign sap:VirtualizedContainerService.HintSize="484.8,178.4" sap2010:WorkflowViewState.IdRef="Assign_15">
                 <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[Role_in_Company]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String">[Role_in_Company1]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
                   <InArgument x:TypeArguments="x:String">[input_Transaction.SpecificContent("Role in Company").ToString]</InArgument>
@@ -244,7 +244,7 @@
   """phone"": """ &amp; Phone_Number &amp; """," &amp;
   """address"": """ &amp; Address &amp; """," &amp;
   """company"": """ &amp; Company_Name &amp; """," &amp;
-  """roleInCompany"": """ &amp; Role_in_Company &amp; """" &amp;
+  """roleInCompany"": """ &amp; Role_in_Company1 &amp; """" &amp;
 "}"]</InArgument>
                 </Assign.Value>
               </Assign>
@@ -284,25 +284,14 @@
                   <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAScwAAEnMBjCK5BwAAAsJJREFUWEftlj9IclEYxq1NG4xAodyaRJDCTZCWtlAhSHBwEAeHxFy0qcXNpiAog4YQhwhERNFBglr8NwUODv5BBAXBwJQGK+LEOXDPd897vd4rt49v+X7wgvd9nvOe516996pC/xgVbCxDrVZDKpWKVKPRgLIsFAVQq9U0gMFggLIsFAXY3d2lAfb29qAsC0UBut0u2fzo6AhKslEUIBaLkQBKULTaaDQim80G20uxdIDX11dULBZRKpUiZ+9wOND9/T16enpC7+/v0C6JrACVSgUdHBzQH5xUud1u1Gw24Zi5LAzQ7/fRxsaGYAOuVldXBT1+4a9oNpvBsQyiAeLxuGBgIBBA5XIZWimPj4/I4/EI1uG+GHMDXF5eMgMuLi6gRZJwOCwrhCBAq9ViFn5+fkKLbHq9nuQsQQD+4xXSbrdROp2Gbcrd3R0aj8dMbzAY0HkWi4XRMMwuz8/P1JxIJPgSgdOy2SyUUDQaFQ0eiUSoNhqNGI1xO51O0SH48nHazc0NlFEwGBRdi+G009NTts8/WFlZIab9/X1+m/D19UWH3N7eQhmFQqGFAba2tohmMpmYPuMWS4n5+Pig+vX1NZTR8fHxwgBiV5ceDYdDari6umJMHJz+8vICJZRMJom2vr4OJcLJycniANVqlRrOz88ZE5/pdApbFHwSYni9Xjr/7e2N9mmAfD5PDZubm9TwW3CzcXU6nT997kOhUGBMdrudmpRiNpulA9TrdcbElc/nI+EmkwldJAW+1/EDy+VyCebh+v7+pt65d4FUra2tIb1eT/6I4tLpdMwTVKqYPfkHh4eHAvNv19nZGX9L4bsALvjNwlcOIgiAwZcULlZaOzs7cBvC3ACYTCaDtre3BYOWLfwGLJVKcDxFNACfh4cH5Pf7yTCNRiPYhCutVousVit5L+RyOThmLrIC/E3+B/gBD7ydkwql2HYAAAAASUVORK5CYII=" InformativeScreenshot="1f9cfad286b08c316908d8bb5326e63c.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Url="https://rpachallenge.com/" Version="V2" />
                 </uix:NApplicationCard.TargetApp>
               </uix:NApplicationCard>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,331.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_2" Status="Successful" TransactionItem="[input_Transaction]">
-                      <ui:SetTransactionStatus.Analytics>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                      </ui:SetTransactionStatus.Analytics>
-                      <ui:SetTransactionStatus.Output>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                      </ui:SetTransactionStatus.Output>
-                    </ui:SetTransactionStatus>
-                  </Sequence>
-                </ui:CommentOut.Body>
-              </ui:CommentOut>
+              <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="484.8,169.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_3" Status="Successful" TransactionItem="[input_Transaction]">
+                <ui:SetTransactionStatus.Analytics>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                </ui:SetTransactionStatus.Analytics>
+                <ui:SetTransactionStatus.Output>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                </ui:SetTransactionStatus.Output>
+              </ui:SetTransactionStatus>
             </Sequence>
           </If.Then>
           <If.Else>
